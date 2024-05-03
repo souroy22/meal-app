@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-section {
+  width: 100svw;
+  height: 100svh;
+  overflow: hidden;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: "Lora", serif;
+  font-style: normal;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+}
+
+#search-form {
+  display: flex;
+  gap: 10px;
+}
+
+#search-field {
+  border: none;
+  border: 2px solid orange;
+  padding: 10px 5px;
+  padding-left: 15px;
+  width: 300px;
+  border-radius: 20px;
+  transition: border 0.2s ease-in, width 0.4s ease-in-out;
+}
+
+#search-field:focus {
+  width: 350px;
+  outline: none;
+  border: 2px solid rgb(114, 75, 1);
+}
+
+#submit-form-btn {
+  border: none;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+#submit-form-btn i {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 9999999;
+}
+
+#submit-form-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 5px gray;
+}
+
+#meals-section {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  justify-content: space-around;
+  gap: 40px;
+  height: calc(100svh - 100px);
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.card-container {
+  width: 300px;
+  height: 330px;
+  box-shadow: 0 0 10px gray;
+  /* background-color: whitesmoke; */
+  /* border: 1px solid; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.image-section {
+  height: 200px;
+  width: 100%;
+}
+
+.food-image {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  object-fit: cover;
+}
+
+.details-section {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meal-area {
+  color: gray;
+}
+
+.icon-container {
+  position: absolute;
+  top: 65%;
+  right: 10px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.fav-icon {
+  color: #ec4134;
+  font-size: 25px;
+  transition: all 1s ease-in-out;
+}
+
+.total-items-count {
+  display: flex;
+  gap: 10px;
+  color: gray;
+}
+
+.total-count {
+  font-weight: 800;
+}
+
+.view-details-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.no-item-found-message {
+  color: gray;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}

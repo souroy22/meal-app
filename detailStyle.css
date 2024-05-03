@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.meal-details-section {
+  display: flex;
+  height: 100svh;
+  width: 100svw;
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding: 30px;
+  font-family: "Lora", serif;
+  align-items: center;
+}
+
+.meal-image-section {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.meal-image {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  object-fit: fill;
+}
+
+.meal-details {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  gap: 5px;
+}
+
+.meal-name {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meal-name i {
+  font-size: 15px;
+}
+
+.youtube-icon {
+  color: red;
+}
+
+.clip-icon {
+  color: blue;
+}
+
+.meal-area {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(66, 63, 63);
+  letter-spacing: 1px;
+}
+
+.meal-instructions {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.meal-category-section {
+  display: flex;
+  gap: 5px;
+}
+
+.meal-category-title {
+  font-weight: 700;
+}
+
+.no-item-found-message {
+  color: gray;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
